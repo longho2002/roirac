@@ -156,6 +156,9 @@ namespace ToanRoiRac_ck
                 {
                     tmpRES += (a.Min_Path[j]).ToString() + "-->";
                     g.DrawLine(new Pen(Color.Red, 3), point[a.Min_Path[j] - 1], point[a.Min_Path[j + 1] - 1]);
+                    int x = (point[a.Min_Path[j] - 1].X + point[a.Min_Path[j + 1] - 1].X) / 2;
+                    int y = (point[a.Min_Path[j] - 1].Y + point[a.Min_Path[j + 1] - 1].Y) / 2;
+                    g.DrawString(a.A[a.Min_Path[j + 1], a.Min_Path[j]].ToString(), new Font("Arial", 16), new SolidBrush(Color.Cyan), x, y);
                 }
 
                 for (int i = 0; i < a.numOfCity; i++)
@@ -182,13 +185,13 @@ namespace ToanRoiRac_ck
 
             switch (choose)
             {
-                case 1:
+                case 0:
                 {
                     string[] t = File.ReadAllLines("test1.txt");
                     a.DocFile(t);
                     break;
                 }
-                case 2:
+                case 1:
                 {
                     string[] t = File.ReadAllLines("test2.txt");
                     a.DocFile(t);

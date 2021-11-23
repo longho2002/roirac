@@ -90,6 +90,7 @@ namespace ToanRoiRac_ck
                     TextBox tb = val.Controls[0] as TextBox;
                     int.TryParse(tb.Text, out res);
                     Form1.a.A[i, j] = Form1.a.A[j, i] = res;
+                    Form1.a.cmin = Form1.a.cmin > Form1.a.A[i, j] ? Form1.a.A[i, j] : Form1.a.cmin;
                 }
                 j++;
             }

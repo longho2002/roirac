@@ -15,7 +15,7 @@ namespace ToanRoiRac_ck
         protected int[] Path = new int[SIZE];
         public int[] Min_Path = new int[SIZE];
         public int MIN = 9999;
-        protected int cmin = 9999;
+        public int cmin = 9999;
         protected int cost = 0;
         public int numOfCity = 0;
         public int[] city = new int[SIZE];
@@ -61,8 +61,8 @@ namespace ToanRoiRac_ck
         }
         private void Process(int run, int num)
         {
-            //if (this.MIN < this.cost + (run - 2) * cmin)
-               //return;
+            if (this.MIN < this.cost + (num - (run - 2)) * cmin)
+               return;
             for (int i = 1; i <= this.n; i++)
             {
                 if (run > num)
@@ -115,7 +115,7 @@ namespace ToanRoiRac_ck
                 {
                     A[i, j] = Int32.Parse(tmp[c++]);
                     A[i, j] = A[i, j] == 0 ? 9999 : A[i, j];
-                    if (A[i, j] != 0)
+                    if (A[i, j] != 9999)
                         cmin = cmin > A[i, j] ? A[i, j] : cmin;
                 }
             }
