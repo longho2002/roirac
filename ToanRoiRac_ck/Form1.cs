@@ -188,17 +188,23 @@ namespace ToanRoiRac_ck
             switch (choose)
             {
                 case 0:
-                {
-                    string[] t = File.ReadAllLines("test1.txt");
-                    a.DocFile(t);
-                    break;
-                }
+                    {
+                        string[] t = File.ReadAllLines("test1.txt");
+                        a.DocFile(t);
+                        break;
+                    }
                 case 1:
-                {
-                    string[] t = File.ReadAllLines("test2.txt");
-                    a.DocFile(t);
-                    break;
-                }
+                    {
+                        string[] t = File.ReadAllLines("test2.txt");
+                        a.DocFile(t);
+                        break;
+                    }
+                case 2:
+                    {
+                        string[] t = File.ReadAllLines("test3.txt");
+                        a.DocFile(t);
+                        break;
+                    }
             }
         }
 
@@ -213,6 +219,12 @@ namespace ToanRoiRac_ck
         {
             pannel_city.Click -= addPoint;
             Draw();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            pannel_city.Controls.Clear();
+            stt.Text = "NORMAL";
         }
     }
 }

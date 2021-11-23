@@ -29,7 +29,17 @@
         private void InitializeComponent()
         {
             this.pannel_city = new System.Windows.Forms.Panel();
+            this.stt = new System.Windows.Forms.Label();
+            this.Status = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cb = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.LB_res = new System.Windows.Forms.Label();
@@ -39,16 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TB_start = new System.Windows.Forms.TextBox();
             this.LB_start = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cb = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.Status = new System.Windows.Forms.Label();
-            this.stt = new System.Windows.Forms.Label();
             this.pannel_city.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,26 @@
             this.pannel_city.Name = "pannel_city";
             this.pannel_city.Size = new System.Drawing.Size(1727, 615);
             this.pannel_city.TabIndex = 0;
+            // 
+            // stt
+            // 
+            this.stt.AutoSize = true;
+            this.stt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.stt.Location = new System.Drawing.Point(121, 16);
+            this.stt.Name = "stt";
+            this.stt.Size = new System.Drawing.Size(101, 31);
+            this.stt.TabIndex = 1;
+            this.stt.Text = "Normal";
+            // 
+            // Status
+            // 
+            this.Status.AutoSize = true;
+            this.Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.Status.Location = new System.Drawing.Point(24, 16);
+            this.Status.Name = "Status";
+            this.Status.Size = new System.Drawing.Size(100, 31);
+            this.Status.TabIndex = 0;
+            this.Status.Text = "Status:";
             // 
             // panel2
             // 
@@ -87,6 +107,92 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1725, 202);
             this.panel2.TabIndex = 1;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button6.Location = new System.Drawing.Point(870, 135);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(91, 53);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "REMOVE";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button5.Location = new System.Drawing.Point(870, 75);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(91, 53);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "DRAW";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button4.Location = new System.Drawing.Point(870, 16);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(91, 53);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "RESET";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.textBox2.Location = new System.Drawing.Point(1103, 135);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(51, 38);
+            this.textBox2.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label4.Location = new System.Drawing.Point(964, 142);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 31);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Chi Phí:";
+            // 
+            // cb
+            // 
+            this.cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.cb.FormattingEnabled = true;
+            this.cb.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cb.Location = new System.Drawing.Point(1103, 16);
+            this.cb.Name = "cb";
+            this.cb.Size = new System.Drawing.Size(121, 39);
+            this.cb.TabIndex = 11;
+            this.cb.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label3.Location = new System.Drawing.Point(964, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 31);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "BỘ TEST";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(47, 167);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(289, 17);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "(Mỗi thành phố cách nhau bởi khoảng trắng)";
             // 
             // button3
             // 
@@ -174,111 +280,6 @@
             this.LB_start.Size = new System.Drawing.Size(240, 31);
             this.LB_start.TabIndex = 0;
             this.LB_start.Text = "Thành phố bắt đầu";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(47, 167);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(289, 17);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "(Mỗi thành phố cách nhau bởi khoảng trắng)";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label3.Location = new System.Drawing.Point(964, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 31);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "BỘ TEST";
-            // 
-            // cb
-            // 
-            this.cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.cb.FormattingEnabled = true;
-            this.cb.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.cb.Location = new System.Drawing.Point(1103, 16);
-            this.cb.Name = "cb";
-            this.cb.Size = new System.Drawing.Size(121, 39);
-            this.cb.TabIndex = 11;
-            this.cb.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label4.Location = new System.Drawing.Point(964, 142);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 31);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Chi Phí:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.textBox2.Location = new System.Drawing.Point(1103, 135);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(51, 38);
-            this.textBox2.TabIndex = 13;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button4.Location = new System.Drawing.Point(870, 16);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(91, 53);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "RESET";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button5.Location = new System.Drawing.Point(870, 75);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(91, 53);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "DRAW";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button6.Location = new System.Drawing.Point(870, 135);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(91, 53);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "REMOVE";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // Status
-            // 
-            this.Status.AutoSize = true;
-            this.Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Status.Location = new System.Drawing.Point(24, 16);
-            this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(100, 31);
-            this.Status.TabIndex = 0;
-            this.Status.Text = "Status:";
-            // 
-            // stt
-            // 
-            this.stt.AutoSize = true;
-            this.stt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.stt.Location = new System.Drawing.Point(121, 16);
-            this.stt.Name = "stt";
-            this.stt.Size = new System.Drawing.Size(101, 31);
-            this.stt.TabIndex = 1;
-            this.stt.Text = "Normal";
             // 
             // Form1
             // 
