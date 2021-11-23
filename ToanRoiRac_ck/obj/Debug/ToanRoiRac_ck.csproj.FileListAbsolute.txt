@@ -1,0 +1,13 @@
+D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\bin\Debug\ToanRoiRac_ck.exe.config
+D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\bin\Debug\ToanRoiRac_ck.exe
+D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\bin\Debug\ToanRoiRac_ck.pdb
+D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\obj\Debug\ToanRoiRac_ck.csproj.AssemblyReference.cache
+D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\obj\Debug\ToanRoiRac_ck.csproj.SuggestedBindingRedirects.cache
+D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\obj\Debug\ToanRoiRac_ck.Form1.resources
+D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\obj\Debug\ToanRoiRac_ck.Properties.Resources.resources
+D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\obj\Debug\ToanRoiRac_ck.csproj.GenerateResource.cache
+D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\obj\Debug\ToanRoiRac_ck.csproj.CoreCompileInputs.cache
+D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\obj\Debug\ToanRoiRac_ck.exe
+D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\obj\Debug\ToanRoiRac_ck.pdb
+D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\obj\Debug\ToanRoiRac_ck.Circular_BTN.resources
+D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\obj\Debug\ToanRoiRac_ck.editForm.resources
