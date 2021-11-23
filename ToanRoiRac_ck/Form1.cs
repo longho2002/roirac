@@ -83,6 +83,8 @@ namespace ToanRoiRac_ck
         }
         private void Draw()
         {
+            if (point.Count() != count)
+                return;
             using (Graphics g = pannel_city.CreateGraphics())
             {
                 //g.Clear(Color.White);
@@ -158,7 +160,7 @@ namespace ToanRoiRac_ck
                     g.DrawLine(new Pen(Color.Red, 3), point[a.Min_Path[j] - 1], point[a.Min_Path[j + 1] - 1]);
                     int x = (point[a.Min_Path[j] - 1].X + point[a.Min_Path[j + 1] - 1].X) / 2;
                     int y = (point[a.Min_Path[j] - 1].Y + point[a.Min_Path[j + 1] - 1].Y) / 2;
-                    g.DrawString(a.A[a.Min_Path[j + 1], a.Min_Path[j]].ToString(), new Font("Arial", 16), new SolidBrush(Color.Cyan), x, y);
+                    g.DrawString(a.A[a.Min_Path[j + 1], a.Min_Path[j]].ToString(), new Font("Arial", 16), new SolidBrush(Color.Blue), x, y);
                 }
 
                 for (int i = 0; i < a.numOfCity; i++)
