@@ -83,7 +83,7 @@ namespace ToanRoiRac_ck
         }
         private void Draw()
         {
-            if (point.Count() != count)
+            if (point.Count() != count - 1)
                 return;
             using (Graphics g = pannel_city.CreateGraphics())
             {
