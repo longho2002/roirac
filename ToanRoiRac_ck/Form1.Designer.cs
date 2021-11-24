@@ -30,18 +30,20 @@
         {
             this.pannel_city = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.LBmode = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.TB_res = new System.Windows.Forms.TextBox();
+            this.LB_res = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.cb = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.LB_res = new System.Windows.Forms.Label();
-            this.TB_res = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,8 +56,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.LBmode = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -95,6 +95,44 @@
             this.panel2.Size = new System.Drawing.Size(1725, 202);
             this.panel2.TabIndex = 1;
             // 
+            // LBmode
+            // 
+            this.LBmode.AutoSize = true;
+            this.LBmode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.LBmode.Location = new System.Drawing.Point(859, 134);
+            this.LBmode.Name = "LBmode";
+            this.LBmode.Size = new System.Drawing.Size(101, 31);
+            this.LBmode.TabIndex = 18;
+            this.LBmode.Text = "Normal";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label11.Location = new System.Drawing.Point(726, 135);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(89, 31);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Mode:";
+            // 
+            // TB_res
+            // 
+            this.TB_res.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.TB_res.Location = new System.Drawing.Point(865, 45);
+            this.TB_res.Name = "TB_res";
+            this.TB_res.Size = new System.Drawing.Size(505, 30);
+            this.TB_res.TabIndex = 5;
+            // 
+            // LB_res
+            // 
+            this.LB_res.AutoSize = true;
+            this.LB_res.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.LB_res.Location = new System.Drawing.Point(726, 45);
+            this.LB_res.Name = "LB_res";
+            this.LB_res.Size = new System.Drawing.Size(121, 31);
+            this.LB_res.TabIndex = 6;
+            this.LB_res.Text = "Lộ Trình:";
+            // 
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -105,6 +143,16 @@
             this.button6.Text = "REMOVE";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label4.Location = new System.Drawing.Point(726, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 31);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Chi Phí:";
             // 
             // button5
             // 
@@ -117,6 +165,14 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.textBox2.Location = new System.Drawing.Point(865, 87);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(51, 30);
+            this.textBox2.TabIndex = 13;
+            // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -128,24 +184,6 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.textBox2.Location = new System.Drawing.Point(865, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(51, 30);
-            this.textBox2.TabIndex = 13;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label4.Location = new System.Drawing.Point(726, 91);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 31);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Chi Phí:";
-            // 
             // cb
             // 
             this.cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
@@ -153,7 +191,8 @@
             this.cb.Items.AddRange(new object[] {
             "1",
             "2",
-            "3"});
+            "3",
+            "4"});
             this.cb.Location = new System.Drawing.Point(349, 162);
             this.cb.Name = "cb";
             this.cb.Size = new System.Drawing.Size(121, 33);
@@ -201,24 +240,6 @@
             this.button2.Text = "ADD CITY";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // LB_res
-            // 
-            this.LB_res.AutoSize = true;
-            this.LB_res.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.LB_res.Location = new System.Drawing.Point(726, 45);
-            this.LB_res.Name = "LB_res";
-            this.LB_res.Size = new System.Drawing.Size(121, 31);
-            this.LB_res.TabIndex = 6;
-            this.LB_res.Text = "Lộ Trình:";
-            // 
-            // TB_res
-            // 
-            this.TB_res.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.TB_res.Location = new System.Drawing.Point(865, 45);
-            this.TB_res.Name = "TB_res";
-            this.TB_res.Size = new System.Drawing.Size(505, 30);
-            this.TB_res.TabIndex = 5;
             // 
             // button1
             // 
@@ -336,26 +357,6 @@
             this.label10.Size = new System.Drawing.Size(104, 20);
             this.label10.TabIndex = 9;
             this.label10.Text = "Hồ Thái Long";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label11.Location = new System.Drawing.Point(726, 135);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(89, 31);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Mode:";
-            // 
-            // LBmode
-            // 
-            this.LBmode.AutoSize = true;
-            this.LBmode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.LBmode.Location = new System.Drawing.Point(859, 134);
-            this.LBmode.Name = "LBmode";
-            this.LBmode.Size = new System.Drawing.Size(101, 31);
-            this.LBmode.TabIndex = 18;
-            this.LBmode.Text = "Normal";
             // 
             // Form1
             // 
