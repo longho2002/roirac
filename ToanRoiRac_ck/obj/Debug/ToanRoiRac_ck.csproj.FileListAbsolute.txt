@@ -11,3 +11,5 @@ D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\obj\Debug\ToanRoiRac_ck.exe
 D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\obj\Debug\ToanRoiRac_ck.pdb
 D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\obj\Debug\ToanRoiRac_ck.Circular_BTN.resources
 D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\obj\Debug\ToanRoiRac_ck.editForm.resources
+D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\bin\Debug\Control.Draggable.dll
+D:\Project _ck\ToanRoiRac_ck\ToanRoiRac_ck\obj\Debug\ToanRoiRac_ck.csproj.CopyComplete

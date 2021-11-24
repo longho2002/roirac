@@ -8,7 +8,7 @@ namespace ToanRoiRac_ck
 {
     public class Graph
     {
-        public const int SIZE = 50;
+        private const int SIZE = 50;
         public int[,] A = new int[SIZE, SIZE];
         public int n;
         protected int[] Danhdau = new int[SIZE];
@@ -16,10 +16,10 @@ namespace ToanRoiRac_ck
         public int[] Min_Path = new int[SIZE];
         public int MIN = 9999;
         public int cmin = 9999;
-        protected int cost = 0;
-        public int numOfCity = 0;
-        public int[] city = new int[SIZE];
-        public int city_;
+        protected int cost = 0; // chi phis hien tai
+        public int numOfCity = 0; // so thanh pho duoc chon
+        public int[] city = new int[SIZE]; // danh dau cac thanh pho duoc chon
+        public int city_; // luu lai so tp da di qua
 
         public int getSize()
         {
@@ -62,7 +62,7 @@ namespace ToanRoiRac_ck
         private void Process(int run, int num)
         {
             if (this.MIN < this.cost + (num - (run - 2)) * cmin)
-               return;
+                return;
             for (int i = 1; i <= this.n; i++)
             {
                 if (run > num)
@@ -118,26 +118,6 @@ namespace ToanRoiRac_ck
                     if (A[i, j] != 9999)
                         cmin = cmin > A[i, j] ? A[i, j] : cmin;
                 }
-            }
-        }
-
-        public void select(int c)
-        {
-            numOfCity = 3;
-            city[0] = 2;
-            city[1] = 3;
-            city[2] = 6;
-        }
-
-        public void xuat()
-        {
-            for (int i = 1; i <= n; i++)
-            {
-                for (int j = 1; j <= n; j++)
-                {
-                    Console.Write(A[i,j] + " ");
-                }
-                Console.WriteLine();
             }
         }
     }

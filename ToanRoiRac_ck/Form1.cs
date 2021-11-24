@@ -18,7 +18,6 @@ namespace ToanRoiRac_ck
         public static Graph a = new Graph();
         public static Circular_BTN tmp = new Circular_BTN();
         public static int id = 0;
-        Graphics g;
         public Form1()
         {
             InitializeComponent();
@@ -39,44 +38,57 @@ namespace ToanRoiRac_ck
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            stt.Text = "ADD";
+            LBmode.Text = "Add";
+            pannel_city.Click -= addPoint;
             pannel_city.Click += addPoint;
+            On_Off_drag(true);
+            OffEdit();
         }
         //53, 57
         protected void addPoint(object sender, EventArgs e)
         {
             Point tmpPoint = pannel_city.PointToClient(Cursor.Position);
             point.Add(tmpPoint);
-            Label lb = new Label()
+            Button btntmp = new Button()
             {
-                Location = tmpPoint,
                 Width = 50,
-                Height = 30,
-                Font = new Font("Arial", 20, FontStyle.Bold),
+                Height = 50,
+                Font = new Font("Arial", 12, FontStyle.Bold),
+                Text = count.ToString(),
+                BackColor = Color.Red
             };
-            lb.Text = count.ToString();
+            btntmp.TabStop = false;
+            btntmp.FlatStyle = FlatStyle.Flat;
+            btntmp.FlatAppearance.BorderSize = 0;
+            btntmp.Location = new Point(tmpPoint.X - btntmp.Width / 2, tmpPoint.Y - btntmp.Height / 2);
             count++;
-            pannel_city.Controls.Add(lb);
+            pannel_city.Controls.Add(btntmp);
         }
 
         // button edit click
         private void button3_Click(object sender, EventArgs e)
         {
-            stt.Text = "EDIT";
-            pannel_city.Click -= addPoint;
+            LBmode.Text = "Edit";
             a.n = count;
-            foreach (Label i in pannel_city.Controls)
+            pannel_city.Click -= addPoint;
+            On_Off_drag(true);
+            foreach (Button i in pannel_city.Controls)
             {
                 i.Click -= ChangePos;
                 i.Click += ChangePos;
             }
         }
 
-        //editForm b = new editForm();
-        //b.ShowDialog();
+        private void On_Off_drag(bool choose)
+        {
+            foreach (Button i in pannel_city.Controls)
+            {
+                ControlExtension.Draggable(i, choose);
+            }
+        }
         private void ChangePos(object sender, EventArgs e)
         {
-            id = int.Parse((sender as Label).Text);
+            id = int.Parse((sender as Button).Text);
             editForm b = new editForm();
             b.ShowDialog();
             Draw();
@@ -85,6 +97,7 @@ namespace ToanRoiRac_ck
         {
             if (point.Count() != count - 1)
                 return;
+            UpdatePos();
             using (Graphics g = pannel_city.CreateGraphics())
             {
                 //g.Clear(Color.White);
@@ -98,25 +111,20 @@ namespace ToanRoiRac_ck
                             g.DrawLine(new Pen(Color.Black, 3), point[i - 1], point[j - 1]);
                             int x = (point[j - 1].X + point[i - 1].X) / 2;
                             int y = (point[j - 1].Y + point[i - 1].Y) / 2;
-                            g.DrawString(a.A[i, j].ToString(), new Font("Arial", 16), new SolidBrush(Color.Crimson), x, y);
+                            g.FillRectangle(new SolidBrush(Color.Cyan), x - 15, y - 15, 30, 30);
+                            g.DrawString(a.A[i, j].ToString(), new Font("Arial", 12), new SolidBrush(Color.DarkOrange), x - 6, y - 6);
                         }
                     }
                 }
             }
         }
 
-        private void Move(object sender, EventArgs e)
-        {
-
-        }
-        //numOfCity = 3;
-        //city[0] = 2;
-        //city[1] = 3;
-        //city[2] = 6;
         private void button1_Click(object sender, EventArgs e)
         {
+            LBmode.Text = "Process";
             pannel_city.Click -= addPoint;
-            stt.Text = "PROCESS";
+            On_Off_drag(true);
+            pannel_city.Click -= addPoint;
             int res;
             bool flag;
             int num_select = 1;
@@ -156,16 +164,23 @@ namespace ToanRoiRac_ck
             {
                 for (int j = 0; j < a.city_ - 1; j++)
                 {
-                    tmpRES += (a.Min_Path[j]).ToString() + "-->";
-                    g.DrawLine(new Pen(Color.Red, 3), point[a.Min_Path[j] - 1], point[a.Min_Path[j + 1] - 1]);
+                    tmpRES += (a.Min_Path[j]).ToString() + "->";
+                    g.DrawLine(new Pen(Color.GreenYellow, 3), point[a.Min_Path[j] - 1], point[a.Min_Path[j + 1] - 1]);
                     int x = (point[a.Min_Path[j] - 1].X + point[a.Min_Path[j + 1] - 1].X) / 2;
                     int y = (point[a.Min_Path[j] - 1].Y + point[a.Min_Path[j + 1] - 1].Y) / 2;
-                    g.DrawString(a.A[a.Min_Path[j + 1], a.Min_Path[j]].ToString(), new Font("Arial", 16), new SolidBrush(Color.Blue), x, y);
+                    g.DrawString(a.A[a.Min_Path[j + 1], a.Min_Path[j]].ToString(), new Font("Arial", 16), new SolidBrush(Color.Blue), x - 8, y - 8);
                 }
+            }
 
-                for (int i = 0; i < a.numOfCity; i++)
+            for (int i = 0; i < a.city_; i++)
+            {
+                foreach (var VARIABLE in pannel_city.Controls)
                 {
-                    g.DrawEllipse(new Pen(Color.Red, 3), point[a.city[i] - 1].X, point[a.city[i] - 1].Y, 50, 50);
+                    Button btn = VARIABLE as Button;
+                    if (btn.Text == a.Min_Path[i].ToString())
+                    {
+                        btn.BackColor = Color.YellowGreen;
+                    }
                 }
             }
             tmpRES += (a.Min_Path[a.city_ - 1]).ToString();
@@ -210,21 +225,42 @@ namespace ToanRoiRac_ck
 
         private void button4_Click(object sender, EventArgs e)
         {
-            pannel_city.Click -= addPoint;
-            stt.Text = "NORMAL";
             pannel_city.Invalidate();
+            LBmode.Text = "Drag";
+            pannel_city.Click -= addPoint;
+            OffEdit();
+            On_Off_drag(true);
+            //pannel_city.Invalidate();
         }
-
+        private void OffEdit()
+        {
+            foreach (Button i in pannel_city.Controls)
+            {
+                i.Click -= ChangePos;
+            }
+        }
+        private void UpdatePos()
+        {
+            point.Clear();
+            foreach (Button i in pannel_city.Controls)
+            {
+                point.Add(new Point(i.Location.X + i.Width / 2, i.Location.Y + i.Height / 2));
+            }
+        }
         private void button5_Click(object sender, EventArgs e)
         {
+            LBmode.Text = "Draw";
             pannel_city.Click -= addPoint;
+            On_Off_drag(false);
             Draw();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             pannel_city.Controls.Clear();
-            stt.Text = "NORMAL";
+            count = 0;
+            pannel_city.Click -= addPoint;
+            On_Off_drag(false);
         }
     }
 }
