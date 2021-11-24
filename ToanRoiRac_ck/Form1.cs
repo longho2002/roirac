@@ -24,7 +24,7 @@ namespace ToanRoiRac_ck
             pannel_city.BackColor = Color.White;
             init();
         }
-        // gán tất cả gt = 9999
+        // gán tất cả gt = 99999
         private void init()
         {
             int cap = a.getSize();
@@ -32,7 +32,7 @@ namespace ToanRoiRac_ck
             {
                 for (int j = 1; j < cap; j++)
                 {
-                    a.A[i, j] = 9999;
+                    a.A[i, j] = 99999;
                 }
             }
         }
@@ -110,7 +110,7 @@ namespace ToanRoiRac_ck
                 {
                     for (int i = 1; i <= len; i++)
                     {
-                        if (a.A[j, i] != 9999)
+                        if (a.A[j, i] != 99999)
                         {
                             g.DrawLine(new Pen(Color.Black, 3), point[i - 1], point[j - 1]);
                             int x = (point[j - 1].X + point[i - 1].X) / 2;
@@ -167,7 +167,7 @@ namespace ToanRoiRac_ck
                 return;
             a.numOfCity = num_select; // gán lại số tp được chọn
             a.Dulich(); // bắt đầu chạy thuật toán
-            if (a.MIN >= 9999)
+            if (a.MIN >= 99999)
             {
                 TB_res.Text = "Không có đường đi";
                 return;
@@ -183,7 +183,7 @@ namespace ToanRoiRac_ck
                     int x = (point[a.Min_Path[j] - 1].X + point[a.Min_Path[j + 1] - 1].X) / 2;
                     int y = (point[a.Min_Path[j] - 1].Y + point[a.Min_Path[j + 1] - 1].Y) / 2;
                     g.FillRectangle(new SolidBrush(Color.Cyan), x - 15, y - 15, 50, 30);
-                    g.DrawString(a.A[a.Min_Path[j + 1], a.Min_Path[j]].ToString(), new Font("Arial", 12), new SolidBrush(Color.Blue), x - 8, y - 8);
+                    g.DrawString(a.A[a.Min_Path[j + 1], a.Min_Path[j]].ToString(), new Font("Arial", 12), new SolidBrush(Color.Red), x - 8, y - 8);
                 }
             }
             // dòng for này để tô lại các thành phố được đi qua
@@ -194,7 +194,7 @@ namespace ToanRoiRac_ck
                     Button btn = VARIABLE as Button;
                     if (btn.Text == a.Min_Path[i].ToString())
                     {
-                        btn.BackColor = Color.Red;
+                        btn.BackColor = Color.YellowGreen;
                     }
                 }
             }

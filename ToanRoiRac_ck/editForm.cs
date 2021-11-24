@@ -86,7 +86,7 @@ namespace ToanRoiRac_ck
             {
                 if (i != j)
                 {
-                    int res = 9999;
+                    int res = 99999;
                     TextBox tb = val.Controls[0] as TextBox;
                     int.TryParse(tb.Text, out res);
                     Form1.a.A[i, j] = Form1.a.A[j, i] = res;

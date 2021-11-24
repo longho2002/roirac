@@ -14,8 +14,8 @@ namespace ToanRoiRac_ck
         protected int[] Danhdau = new int[SIZE];
         protected int[] Path = new int[SIZE];
         public int[] Min_Path = new int[SIZE];
-        public int MIN = 9999;
-        public int cmin = 9999;
+        public int MIN = 99999;
+        public int cmin = 99999;
         protected int cost = 0; // chi phis hien tai
         public int numOfCity = 0; // so thanh pho duoc chon
         public int[] city = new int[SIZE]; // danh dau cac thanh pho duoc chon
@@ -27,16 +27,16 @@ namespace ToanRoiRac_ck
         }
         public Graph()
         {
-            MIN = 9999;
-            cmin = 9999;
+            MIN = 99999;
+            cmin = 99999;
             cost = 0;
             numOfCity = 0;
         }
         public Graph(int n)
         {
             this.n = n;
-            MIN = 9999;
-            cmin = 9999;
+            MIN = 99999;
+            cmin = 99999;
             cost = 0;
             numOfCity = 0;
         }
@@ -114,8 +114,8 @@ namespace ToanRoiRac_ck
                 for (int j = 1; j <= n; j++)
                 {
                     A[i, j] = Int32.Parse(tmp[c++]);
-                    A[i, j] = A[i, j] == 0 ? 9999 : A[i, j];
-                    if (A[i, j] != 9999)
+                    A[i, j] = A[i, j] == 0 ? 99999 : A[i, j];
+                    if (A[i, j] != 99999)
                         cmin = cmin > A[i, j] ? A[i, j] : cmin;
                 }
             }
